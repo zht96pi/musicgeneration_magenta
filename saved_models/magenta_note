@@ -1,0 +1,74 @@
+### MELODY_RNN
+
+python magenta/models/melody_rnn/melody_rnn_generate.py --config=basic_rnn \
+--bundle_file=/home/anhtrangchip/code/lab/magenta/magenta/models/melody_rnn/basic_rnn.mag \
+--output_dir=/tmp/melody_rnn/generated \
+--num_outputs=10 \
+--num_steps=128 \
+--primer_melody="[60]"
+
+### Performance_RNN
+
+BUNDLE_PATH=/home/anhtrangchip/code/lab/magenta/magenta/models/performance_rnn/pretrain_model/performance_with_dynamics.mag
+CONFIG=<one of 'performance', 'performance_with_dynamics', etc., matching the bundle>
+
+python /home/anhtrangchip/code/lab/magenta/magenta/models/performance_rnn/performance_rnn_generate.py --config=performance_with_dynamics \
+--bundle_file=/home/anhtrangchip/code/lab/magenta/magenta/models/performance_rnn/pretrain_model/performance_with_dynamics.mag \
+--output_dir=/tmp/performance_rnn/generated \
+--num_outputs=10 \
+--num_steps=3000 \
+--primer_melody="[60,62,64,65,67,69,71,72]"
+
+### Note 16.9
+Tìm các đóng cách đưa file midi thành index, gói vào torch.nn datatype (?)
+Cấu trúc mạng: LTSM cell, 3 lớp mỗi lớp 512 cells
+
+
+### CONVERT NOTESEQ
+
+INPUT_DIRECTORY=/home/anhtrangchip/code/lab/magenta/data/MIDI
+
+# TFRecord file that will contain NoteSequence protocol buffers.
+SEQUENCES_TFRECORD=/tmp/notesequences.tfrecord
+
+python /home/anhtrangchip/code/lab/magenta/magenta/scripts/convert_dir_to_note_sequences.py --input_dir=/home/anhtrangchip/code/lab/magenta/data/MIDI \
+  --output_file=/tmp/notesequences.tfrecord \
+  --recursive
+
+
+### NoteSeq -> SeqExamples
+
+CONFIG=<one of 'performance', 'performance_with_dynamics', etc.>
+
+python /home/anhtrangchip/code/lab/magenta/magenta/models/performance_rnn/performance_rnn_create_dataset.py --config='performance' \
+--input=/tmp/notesequences.tfrecord \
+--output_dir=/tmp/performance_rnn/sequence_examples \
+--eval_ratio=0.10
+
+
+### TRAIN
+python /home/anhtrangchip/code/lab/magenta/magenta/models/performance_rnn/performance_rnn_train.py --config='performance' \
+--run_dir=/tmp/performance_rnn/logdir/run1 \
+--sequence_example_file=/tmp/performance_rnn/sequence_examples/training_performances.tfrecord
+
+
+### VIEW RESULT
+tensorboard --logdir=/tmp/performance_rnn/logdir
+tensorboard --logdir=/home/anhtrangchip/code/lab/pno-ai/runs
+http://localhost:6006
+
+tensorboard --logdir=/home/anhtrangchip/code/lab/magenta/data/performance_rnn/logdir
+
+
+### GENERATE
+python /home/anhtrangchip/code/lab/magenta/magenta/models/performance_rnn/performance_rnn_generate.py --run_dir=/tmp/performance_rnn/logdir/run2 \
+--output_dir=/tmp/performance_rnn/generated \
+--config='performance' \
+--num_outputs=10 \
+--num_steps=3000 \
+--primer_melody="[60,62,64,65,67,69,71,72]"
+
+ssh cotai@14.161.35.191 -p 53265
+ssh cotai@14.161.35.191 -p 19720
+CUDA DEVICE 1 (cái thứ 2)
+
