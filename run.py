@@ -10,6 +10,8 @@ from train import train
 from model import MusicTransformer
 import argparse
 
+#!/usr/bin/env python
+
 def main():
     parser = argparse.ArgumentParser("Script to train model on a GPU")
     parser.add_argument("--checkpoint", type=str, default=None,
