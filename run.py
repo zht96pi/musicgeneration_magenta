@@ -31,7 +31,7 @@ def main():
     if args.checkpoint is not None:
         state = torch.load(args.checkpoint)
         transformer.load_state_dict(state)
-        print(f"Successfully loaded checkpoint at {args.checkpoint}")
+        print("Successfully loaded checkpoint at {args.checkpoint}")
     #rule of thumb: 1 minute is roughly 2k tokens
     
     pipeline = PreprocessingPipeline(input_dir="data", stretch_factors=[0.975, 1, 1.025],
@@ -41,10 +41,10 @@ def main():
     pipeline_start = time.time()
     pipeline.run()
     runtime = time.time() - pipeline_start
-    print(f"MIDI pipeline runtime: {runtime / 60 : .1f}m")
+    print("MIDI pipeline runtime: {runtime / 60 : .1f}m")
 
     today = datetime.date.today().strftime('%m%d%Y')
-    checkpoint = f"saved_models/tf_{today}"
+    checkpoint = "saved_models/tf_{today}"
 
     training_sequences = pipeline.encoded_sequences['training']
     validation_sequences = pipeline.encoded_sequences['validation']
