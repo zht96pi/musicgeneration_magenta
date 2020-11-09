@@ -47,7 +47,7 @@ def main():
     training_sequences = pipeline.encoded_sequences['training']
     validation_sequences = pipeline.encoded_sequences['validation']
     
-    batch_size = 4
+    batch_size = 16
     
     train(transformer, training_sequences, validation_sequences,
                epochs = args.n_epochs, evaluate_per = 1,
