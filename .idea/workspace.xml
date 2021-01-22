@@ -14,53 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e158f750-beb8-43cf-9c20-6ca8169bd2cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/model/MusicLSTM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1604545428.anhtrangchip-Inspiron-7577.6422.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1604545582.anhtrangchip-Inspiron-7577.6664.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1604546048.anhtrangchip-Inspiron-7577.7083.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1604548477.anhtrangchip-Inspiron-7577.8418.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1604548747.anhtrangchip-Inspiron-7577.8546.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1604551864.anhtrangchip-Inspiron-7577.9634.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1604552009.anhtrangchip-Inspiron-7577.9702.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1604552059.anhtrangchip-Inspiron-7577.9742.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1604552137.anhtrangchip-Inspiron-7577.9822.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1604555761.anhtrangchip-Inspiron-7577.11194.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610678498.anhtrangchip-Inspiron-7577.4617.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610679476.anhtrangchip-Inspiron-7577.4917.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610679975.anhtrangchip-Inspiron-7577.5155.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610680680.anhtrangchip-Inspiron-7577.5570.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610680729.anhtrangchip-Inspiron-7577.5615.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610680977.anhtrangchip-Inspiron-7577.5696.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610681204.anhtrangchip-Inspiron-7577.5774.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610681438.anhtrangchip-Inspiron-7577.5850.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610682151.anhtrangchip-Inspiron-7577.6155.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610686066.anhtrangchip-Inspiron-7577.8223.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610695531.anhtrangchip-Inspiron-7577.2995.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610700516.anhtrangchip-Inspiron-7577.4772.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1610700543.anhtrangchip-Inspiron-7577.4812.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1611296080.anhtrangchip-Inspiron-7577.2907.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1611296267.anhtrangchip-Inspiron-7577.2610.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1611296873.anhtrangchip-Inspiron-7577.3617.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1611298091.anhtrangchip-Inspiron-7577.2809.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1611298203.anhtrangchip-Inspiron-7577.2241.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1611299017.anhtrangchip-Inspiron-7577.3202.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1611299464.anhtrangchip-Inspiron-7577.3452.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1611299491.anhtrangchip-Inspiron-7577.3489.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1611299627.anhtrangchip-Inspiron-7577.3528.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saved_models/tf_01152021_e0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saved_models/tf_01152021_e1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saved_models/tf_01152021_e2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saved_models/tf_01152021_e3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saved_models/tf_01222021_e0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saved_models/tf_01222021_e1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saved_models/tf_01222021_e2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saved_models/tf_01222021_e3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saved_models/tf_01222021_e4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/nmodel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/transformer.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/transformer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1611299932.anhtrangchip-Inspiron-7577.3776.0" beforeDir="false" afterPath="$PROJECT_DIR$/runs/transformers/events.out.tfevents.1611299932.anhtrangchip-Inspiron-7577.3776.0" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,38 +134,38 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="545" y="320" width="416" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1611297547161" />
-    <state width="1830" height="344" key="GridCell.Tab.0.bottom" timestamp="1611299700322">
+    <state width="1830" height="344" key="GridCell.Tab.0.bottom" timestamp="1611299929002">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="344" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1611299700322" />
-    <state width="1830" height="344" key="GridCell.Tab.0.center" timestamp="1611299700322">
+    <state width="1830" height="344" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1611299929002" />
+    <state width="1830" height="344" key="GridCell.Tab.0.center" timestamp="1611299929002">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="344" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1611299700322" />
-    <state width="1830" height="344" key="GridCell.Tab.0.left" timestamp="1611299700321">
+    <state width="1830" height="344" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1611299929002" />
+    <state width="1830" height="344" key="GridCell.Tab.0.left" timestamp="1611299929001">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="344" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1611299700321" />
-    <state width="1830" height="344" key="GridCell.Tab.0.right" timestamp="1611299700322">
+    <state width="1830" height="344" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1611299929001" />
+    <state width="1830" height="344" key="GridCell.Tab.0.right" timestamp="1611299929002">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="344" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1611299700322" />
-    <state width="1830" height="344" key="GridCell.Tab.1.bottom" timestamp="1611299628782">
+    <state width="1830" height="344" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1611299929002" />
+    <state width="1830" height="344" key="GridCell.Tab.1.bottom" timestamp="1611299929003">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1611299628782" />
-    <state width="1830" height="344" key="GridCell.Tab.1.center" timestamp="1611299628781">
+    <state width="1830" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1611299929003" />
+    <state width="1830" height="344" key="GridCell.Tab.1.center" timestamp="1611299929002">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1611299628781" />
-    <state width="1830" height="344" key="GridCell.Tab.1.left" timestamp="1611299628781">
+    <state width="1830" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1611299929002" />
+    <state width="1830" height="344" key="GridCell.Tab.1.left" timestamp="1611299929002">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1611299628781" />
-    <state width="1830" height="344" key="GridCell.Tab.1.right" timestamp="1611299628781">
+    <state width="1830" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1611299929002" />
+    <state width="1830" height="344" key="GridCell.Tab.1.right" timestamp="1611299929003">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1611299628781" />
+    <state width="1830" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1611299929003" />
     <state x="718" y="162" key="SettingsEditor" timestamp="1603787965208">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -222,15 +176,6 @@
     <state x="530" y="246" width="672" height="160" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604102655294" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/train/train.py</url>
-          <line>151</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="accuracy" />

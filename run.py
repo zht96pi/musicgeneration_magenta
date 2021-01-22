@@ -11,6 +11,8 @@ from model import MusicTransformer
 from model.MusicLSTM import MusicLSTM
 import argparse
 
+#!/usr/bin/env python
+
 def main():
     parser = argparse.ArgumentParser("Script to train model on a GPU")
     parser.add_argument("--checkpoint", type=str, default=None,
@@ -23,6 +25,7 @@ def main():
     n_velocity_bins = 32
     seq_length = 1024
     n_tokens = 256 + sampling_rate + n_velocity_bins
+<<<<<<< HEAD
 
     """ORIGINAL CODE"""
     # transformer = MusicTransformer(n_tokens, seq_length,
@@ -68,6 +71,18 @@ def main():
     #     print(f"Successfully loaded checkpoint at {args.checkpoint}")
     # rule of thumb: 1 minute is roughly 2k tokens
 
+=======
+    transformer = MusicTransformer(n_tokens, seq_length, 
+            d_model = 64, n_heads = 8, d_feedforward=256, 
+            depth = 4, positional_encoding=True, relative_pos=True)
+
+    if args.checkpoint is not None:
+        state = torch.load(args.checkpoint)
+        transformer.load_state_dict(state)
+        print("Successfully loaded checkpoint at {args.checkpoint}")
+    #rule of thumb: 1 minute is roughly 2k tokens
+    
+>>>>>>> 0b044b39ed1e19abce120d304eeeb7a566818428
     pipeline = PreprocessingPipeline(input_dir="data", stretch_factors=[0.975, 1, 1.025],
                                      split_size=30, sampling_rate=sampling_rate, n_velocity_bins=n_velocity_bins,
                                      transpositions=range(-2, 3), training_val_split=0.9,
@@ -76,9 +91,10 @@ def main():
     pipeline_start = time.time()
     pipeline.run()
     runtime = time.time() - pipeline_start
-    print(f"MIDI pipeline runtime: {runtime / 60 : .1f}m")
+    print("MIDI pipeline runtime: {runtime / 60 : .1f}m")
 
     today = datetime.date.today().strftime('%m%d%Y')
+<<<<<<< HEAD
     checkpoint = f"saved_models/tf_{today}"  # check point
 
     training_sequences = pipeline.encoded_sequences['training']
@@ -94,6 +110,19 @@ def main():
           epochs=args.n_epochs, evaluate_per=1,
           batch_size=batch_size, batches_per_print=100,
           padding_index=0, checkpoint_path=checkpoint)
+=======
+    checkpoint = "saved_models/tf_{today}"
+
+    training_sequences = pipeline.encoded_sequences['training']
+    validation_sequences = pipeline.encoded_sequences['validation']
+    
+    batch_size = 16
+    
+    train(transformer, training_sequences, validation_sequences,
+               epochs = args.n_epochs, evaluate_per = 1,
+               batch_size = batch_size, batches_per_print=100,
+               padding_index=0, checkpoint_path=checkpoint)
+>>>>>>> 0b044b39ed1e19abce120d304eeeb7a566818428
 
 
 if __name__=="__main__":
