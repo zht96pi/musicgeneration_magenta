@@ -61,11 +61,11 @@ def train(model, training_data, validation_data,
     writer = SummaryWriter('./runs/transformers')
     training_start_time = time.time()
 
-    model.train()
+    model.train() ## init model structure
     optimizer = torch.optim.Adam(model.parameters())
 
-    if custom_schedule:
-        optimizer = TFSchedule(optimizer, model.d_model)
+    # if custom_schedule:
+    #     optimizer = TFSchedule(optimizer, model.d_model)
 
     if custom_loss:
         loss_function = smooth_cross_entropy
@@ -98,7 +98,7 @@ def train(model, training_data, validation_data,
                 continue
             x, y, x_mask = batch_to_tensors(batch, model.n_tokens,
                                             max_length)
-            y_hat = model(x, x_mask).transpose(1, 2)
+            y_hat = model(x)
 
             # shape: (batch_size, n_tokens, seq_length)
 
@@ -116,6 +116,7 @@ def train(model, training_data, validation_data,
             writer.add_scalar("loss/train_loss", training_loss, e * len([training_batches]) + idx)
             # take average over subset of batch?
             averaged_loss += training_loss
+            # print("trained_loss: ", training_loss)
             averaged_accuracy += accuracy(y_hat, y, x_mask)
             if batch_num % batches_per_print == 0:
                 print(f"batch {batch_num}, loss: {averaged_loss / batches_per_print : .2f}")
@@ -147,7 +148,9 @@ def train(model, training_data, validation_data,
                 x, y, x_mask = batch_to_tensors(batch, model.n_tokens,
                                                 max_length)
 
-                y_hat = model(x, x_mask).transpose(1, 2)
+                # y_hat = model(x, x_mask).transpose(1, 2)
+                print(x.size())
+                y_hat = model(x)
                 loss = loss_function(y_hat, y)
                 val_loss += loss.item()
                 val_accuracy += accuracy(y_hat, y, x_mask)
