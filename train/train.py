@@ -133,6 +133,7 @@ def train(model, training_data, validation_data,
         if (e + 1) % evaluate_per == 0:
 
             # deactivate backprop for evaluation
+            print("evaluate")
             model.eval()
             validation_batches = prepare_batches(validation_data,
                                                  batch_size)
@@ -149,7 +150,7 @@ def train(model, training_data, validation_data,
                                                 max_length)
 
                 # y_hat = model(x, x_mask).transpose(1, 2)
-                print(x.size())
+                # print("x size ", x.size())
                 y_hat = model(x)
                 loss = loss_function(y_hat, y)
                 val_loss += loss.item()
